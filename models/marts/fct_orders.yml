@@ -1,7 +1,5 @@
 models:
   - name: fct_orders
-    group: finance
-    access: public
     latest_version: 1
     config:
       contract:
@@ -29,13 +27,14 @@ models:
         data_type: varchar
         tests:
           - accepted_values:
-              values:
-                - "Brooklyn"
-                - "Philadelphia"
+              arguments:
+                values:
+                  - "Brooklyn"
+                  - "Philadelphia"
       - name: tax_rate
         data_type: number
       - name: location_opened_at
-        data_type: timestamp_ntz
+        data_type: date
       - name: ordered_month
         data_type: number
       - name: ordered_day
